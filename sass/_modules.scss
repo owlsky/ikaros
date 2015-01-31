@@ -1,0 +1,67 @@
+/* Navigation */
+
+.nav {
+  margin: 0;
+  @extend %list-unstyled;
+  overflow: hidden;
+  &__item {
+    float: left;
+    a {
+      display: block;
+      padding: 10px 20px 0;
+      font: bold 12px "Aller", sans-serif;
+      line-height: 78px;
+      text-transform: uppercase;
+      color: #d4d4d4;
+      border-left: 1px solid #3a3d40;
+      border-right: 1px solid #292c2d;
+      @include transition;
+      &:hover {
+        color: #86acc4;
+      }
+    }
+    &--current a {
+      background-color: #35373a;
+      color: #86acc4;
+    }
+    &:first-child {
+      border-left: 1px solid #292c2d;
+    }
+  }
+}
+
+
+// Gallery
+
+.gallery {
+  margin: 0 -6px;
+  @extend .clearfix;
+  @extend %list-unstyled;
+  li {
+    float: left;
+    margin: 0 6px 12px;
+    width: image-width("work/project-1.jpg");
+    a {
+      display: inline-block;
+      width: image-width("work/project-1.jpg");
+      height: image-height("work/project-1.jpg");
+    }
+  }
+}
+
+// Client
+
+.clients {
+  @extend %list-unstyled;
+  text-align: justify;
+  &:after {
+    display: inline-block;
+    width: 100%;
+    content: '';
+  }
+  li {
+    display: inline-block;
+    width: 135px;
+    vertical-align: middle;
+  }
+}

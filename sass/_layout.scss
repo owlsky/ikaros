@@ -1,0 +1,92 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+  @extend .clearfix;
+}
+
+
+/* Header */
+
+.navbar {
+  margin-bottom: 50px;
+  background-color: #3a3d40;
+  border-bottom: 5px solid #4a4d50;
+  @include box-shadow(0 1px 0 rgba(0,0,0,1));
+  &-brand {
+    float: left;
+    width: image-width("logo.png");
+    margin: 28px 0;
+    a {
+      display: block;
+      width: image-width("logo.png");
+      height: image-height("logo.png");
+      background: image-url("logo.png") 0 0 no-repeat;
+    }
+  }
+  &-nav {
+    float: right;
+  }
+}
+
+// Slider
+
+%cycle-prev-next {
+  position: absolute;
+  top: 50%;
+  width: image-width("arrow-left.png");
+  height: image-height("arrow-left.png");
+  margin-top: -(image-height("arrow-left.png") / 2);
+  z-index: 999;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.cycle-prev {
+  @extend %cycle-prev-next;
+  left: 20px;
+  background-image: image-url("arrow-left.png");
+}
+.cycle-next {
+  @extend %cycle-prev-next;
+  right: 20px;
+  background-image: image-url("arrow-right.png");
+}
+
+// Services
+.tabs {
+  padding-bottom: 50px;
+  @extend .clearfix;
+  &-thumbs {
+    float: left;
+    width: image-width("web-design-img.jpg");
+  }
+  &-details {
+    float: right;
+    width: 530px;
+    font-size: 13px;
+    line-height: 22px;
+    color: #555;
+    h3 {
+      margin-top: 0;
+      font-size: 17px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    ul {
+      @extend %list-unstyled;
+      li {
+        position: relative;
+        padding-left: 20px;
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: url("../img/check.png");
+          color: blue;
+        }
+      }
+    }
+  }
+}
