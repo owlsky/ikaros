@@ -30,8 +30,46 @@
   }
 }
 
+/* Tabs */
 
-// Gallery
+#tabs {
+  position: relative;
+  margin-bottom: 30px;
+  @extend %list-unstyled;
+  text-align: center;
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+    content: '';
+    z-index: -1;
+  }
+  li {
+    display: inline-block;
+    margin-left: -5px;
+    a {
+      display: inline-block;
+      padding: 0 2em;
+      font-family: "Aller", sans-serif;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 30px;
+      color: #555;
+      background-color: #fff;
+      border: 1px solid #dedede;
+    }
+  }
+  .selected {
+    margin-bottom: -1px;
+    color: #6b99b6;
+    border-bottom: 1px solid #fff;
+  }
+}
+
+/* Gallery */
 
 .gallery {
   margin: 0 -6px;
@@ -45,6 +83,13 @@
       display: inline-block;
       width: image-width("work/project-1.jpg");
       height: image-height("work/project-1.jpg");
+      overflow: hidden;
+      img {
+        @include transition(.3s);
+      }
+      &:hover img {
+        @include transform(scale(1.2));
+      }
     }
   }
 }
@@ -52,6 +97,7 @@
 // Client
 
 .clients {
+  margin-bottom: 50px;
   @extend %list-unstyled;
   text-align: justify;
   &:after {
@@ -63,5 +109,76 @@
     display: inline-block;
     width: 135px;
     vertical-align: middle;
+  }
+}
+
+// Form
+
+.form {
+  &-group {
+    margin-bottom: 10px;
+  }
+  &-control {
+    width: 100%;
+  }
+  %input-base {
+    padding: 5px 10px;
+    font-size: 13px;
+    color: #bfbfbf;
+    border: 0;
+    background-color: #282b2d;
+    @include box-sizing(border-box);
+    @include transition(.3s);
+    &:focus {
+      outline: none;
+      background-color: lighten(#282b2d, 3%);
+    }
+    &:hover {
+      @include box-shadow(0 0 5px rgba(255,255,255,.25));
+    }
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    @extend %input-base;
+  }
+  textarea {
+    height: 140px;
+    resize: none;
+  }
+  input[type="text"],
+  input[type="email"] {
+    line-height: 25px;
+    height: 35px;
+  }
+  input[type="submit"] {
+    width: 110px;
+    height: 29px;
+    @include box-sizing(border-box);
+    border: 1px solid rgb(47, 50, 53);
+    @include border-radius(2px);
+  }
+}
+
+/* Icons */
+
+@import "compass/utilities/sprites";
+@import "icon/*.png";
+@include all-icon-sprites;
+
+.social-media {
+  float: right;
+  margin-right: -5px;
+  @extend %list-unstyled;
+  overflow: hidden;
+  li {
+    float: left;
+    margin: 0 5px;
+    background-image: none;
+    a {
+      display: block;
+      width: 25px;
+      height: 25px;
+    }
   }
 }

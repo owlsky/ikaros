@@ -45,7 +45,14 @@
       <h2>our services</h2>
       <p class="lead">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur. Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
 
-      <div id="design" class="tabs">
+
+      <ul id="tabs">
+        <li><a href="#web" class="selected">Web Design</a></li>
+        <li><a href="#photography">Photography</a></li>
+        <li><a href="#graphic">Graphic</a></li>
+      </ul>
+
+      <div id="web" class="tabs">
         <div class="tabs-thumbs">
           <img src="img/web-design-img.jpg" alt="web design">
         </div>
@@ -61,8 +68,44 @@
             <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
             <li>Etiam porta sem malesuada magna mollis euismod.</li>
           </ul>
+        </div> <!-- /.tabs-details -->
+      </div> <!-- /.tabs -->
+
+      <div id="photography" class="tabs">
+        <div class="tabs-thumbs">
+          <img src="img/tabs-image-2.jpg" alt="web design">
         </div>
-      </div>
+        <div class="tabs-details">
+          <h3>Lorem ipsum dolor sit amet.</h3>
+
+          <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. </p>
+
+          <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. </p>
+
+          <ul>
+            <li>Vestibulum id ligula porta felis euismod semper.</li>
+            <li>Donec ullamcorper nulla non metus auctor fringilla.</li>
+            <li>Etiam porta sem malesuada magna mollis euismod.</li>
+            <li>Etiam porta sem malesuada magna mollis euismod.</li>
+          </ul>
+        </div> <!-- /.tabs-details -->
+      </div> <!-- /.tabs -->
+
+      <div id="graphic" class="tabs">
+        <div class="tabs-thumbs">
+          <img src="img/tabs-image-3.jpg" alt="web design">
+        </div>
+        <div class="tabs-details">
+          <h3>Fuga consequuntur incidunt vel quam!</h3>
+
+          <p>Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla. Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum. </p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ab tenetur ea beatae. Libero aperiam nulla natus, quasi voluptate tempora rerum voluptatum praesentium dicta dolorum vero sed incidunt nobis sit.</p>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio totam aperiam pariatur porro impedit, explicabo molestias id dolorem provident quidem veritatis, temporibus cumque voluptas fuga nobis nisi? Ab quisquam, quos!</p>
+
+        </div> <!-- /.tabs-details -->
+      </div> <!-- /.tabs -->
 
     </section> <!-- /.services -->
 
@@ -93,6 +136,8 @@
 
     </section>
 
+    <hr class="divider">
+
     <!-- Customers -->
     <section class="customers">
       <h2>Our Customers</h2>
@@ -110,10 +155,10 @@
 
   </div> <!-- /.container -->
 
-  <footer>
+  <footer class="footer">
 
-    <div class="container">
-      <div class="column">
+    <div class="container footer-links">
+      <div class="posts">
         <h3>popular post</h3>
         <ul>
           <li>
@@ -130,34 +175,64 @@
           </li>
         </ul>
       </div>
-      <div class="column">
+      <div class="tweets">
         <h3>twitter</h3>
         <ul>
-          <li>Praesent commodo cursus magna Morbi leo risus nulla consectetur. - <span> 21 hours ago</span></li>
-          <li>Vestibulum id ligula porta euismod semper. auctor dolor fermentum. - <span> 3 days ago</span></li>
-          <li>Donec ullamcorper nulla non metus auctor. - <span> 5 days ago</span></li>
+          <li>
+            <a href="#">Praesent commodo cursus magna Morbi leo risus nulla consectetur. - <span> 21 hours ago</span></a>
+          </li>
+          <li>
+            <a href="#">Vestibulum id ligula porta euismod semper. auctor dolor fermentum. - <span> 3 days ago</span></a>
+          </li>
+          <li>
+            <a href="#">Donec ullamcorper nulla non metus auctor. - <span> 5 days ago</span></a>
+          </li>
         </ul>
       </div>
-      <div class="column">
+      <div class="about">
         <h3>a little about me</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <p>Donec id elit non porta gravida at eget metus. Nullam quis risus eget urna mollis ornare vel.</p>
       </div>
-      <div class="column">
+      <div class="contact">
         <h3>contact form</h3>
-        <form action="/">
-          <p><input type="text" name="" id=""></p>
-          <p><input type="email" name="" id=""></p>
-          <p><textarea name="" id="" cols="30" rows="10"></textarea></p>
+        <form action="/" class="form">
+          <div class="form-group">
+            <input type="text" name="" id="" class="form-control" placeholder="Your Name">
+          </div>
+          <div class="form-group">
+            <input type="email" name="" id="" class="form-control" placeholder="Your Mail">
+          </div>
+          <div class="form-group">
+            <textarea name="" id="" class="form-control" placeholder="Message"></textarea>
+          </div>
+          <input type="submit" value="Submit">
         </form>
       </div> <!-- /.column -->
     </div> <!-- /.container -->
 
+  <div class="footer-info">
+    <div class="container">
+      <p class="copyright">Copyright (c) 2015 Copyright Holder All Rights Reserved.</p>
+      <!-- /.copyright -->
+      <ul class="social-media">
+        <li><a href="#" class="icon-rss"></a></li>
+        <li><a href="#" class="icon-facebook"></a></li>
+        <li><a href="#" class="icon-twitter"></a></li>
+        <li><a href="#" class="icon-dribbble"></a></li>
+        <li><a href="#" class="icon-pinterest"></a></li>
+        <li><a href="#" class="icon-linkedin"></a></li>
+      </ul> <!-- /.social-media -->
+    </div> <!-- /.container -->
+  </div>
 
   </footer>
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/jquery-cycle2/build/jquery.cycle2.min.js"></script>
-
+  <script src="js/jquery.idTabs.min.js"></script>
+  <script type="text/javascript">
+    $("#tabs").idTabs();
+  </script>
 </body>
 </html>
